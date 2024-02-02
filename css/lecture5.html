@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 10px;
+        }
+
+        div{
+            border: 3px solid goldenrod ;
+            width: 200px;
+            height: 100px;
+            margin: 30px;
+            padding: 50px;
+            box-sizing: border-box;
+            /* display: inline; */
+        }
+
+        span{
+            border: 3px solid pink ;
+            /* margin = horizontally dal skte h, vertically nahi */
+            margin: 25px;
+            padding: 20px;
+            box-sizing: border-box; 
+
+            /* span can behave as a block element by adding */
+            /* display: block;   */
+        }
+
+            /* inline-block */
+            /* behave as a inline , comes in same line*/
+            /* can add custom width, height on inline-block element */
+        span{
+            border: 2px solid pink ;
+            margin: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            width: 400px;
+            height: 200px; 
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- block Element -->
+    <!-- div,p,h1,etc -->
+
+    <!-- property -->
+    <!-- 1.new line -->
+    <!-- width=extreme left to extreme right -->
+    <!-- custom width/height = respect/can change aphne aphse -->
+    <!-- custom margin/padding = respect/can change aphne aphse-->
+    <div>
+        Welcome!
+    </div>
+    <div>
+        Hello jee kaise ho?
+    </div>
+    <!-- inline Element -->
+    <!-- a, span, etc -->
+
+    <!-- property -->
+    <!-- 1.same line -->
+    <!-- width=content width -->
+    <!-- custom width/height = can not change  -->
+    <!-- custom margin= possible in horizontal, can not change in vertical axis-->
+    <!-- custom padding = respect/can change aphne aphse-->
+
+    <span>
+        feeling Good!
+    </span>
+    <span>
+        you are looking cool!
+    </span>
+</body>
+</html>

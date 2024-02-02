@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(72, 70, 70);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,400px);
+    gap: 0.4rem;
+    padding: 4rem;
+    border: 2px solid rgb(248, 242, 242);
+    /* horizontally */
+    /* justify-items: end; */
+    /* vertically */
+    /* align-items: end; */
+    /* horizontal and vertical - shorthand*/
+    place-items: center;
+    
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(15, 91, 91);
+    border: 5px solid rgb(194, 169, 169);
+
+    /* for vertically */
+    /* cell k right most area p align*/
+    /* justify-self: end; */
+    /* justify-self: start; */
+    
+    /* can use stretch also , but with no width height */
+    /* justify-self: stretch; */
+    /* justify-self: center; */
+
+    /* for horizontally */
+    /* cell k andr bottom most point m ayega */
+    /* align-self: end; */
+
+    /* align-self: start; */
+    /* stretch possible but without width, height */
+    /* align-self: stretch; */
+    /* align-self: center; */
+
+    /* combine align-self and justify-self = place-self */
+    /* vertically and horizontally dono axis k andr property apply lr skte h */
+    /* shorthand */
+    place-self: center;
+}

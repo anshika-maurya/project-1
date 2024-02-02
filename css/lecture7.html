@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            border: 1px solid black;
+            
+        }
+
+        img{
+            margin: 10px;
+        }
+
+        /* by default: position is static */
+        /* top, right, left, bottom :nothing apply in */
+        
+        .image2{
+            /* relative position */
+
+            /* is positioned relative to its normal position */
+            /* current window k according, current window k relatively position kr skte h kisi bhi element ko  */
+            /* 4 properties: top, right, left, bottom */
+            /* gap maintained, jo bhi purane wale k tha */
+
+            position: relative;
+            top: 200px;
+            right: 100px;
+            
+        }
+        /* absolute position */
+        /* is relative to closet positioned parent */
+        /* is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+        /* if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling */
+
+        /* not maintained gap */
+        /* overlap */
+        /* 4 properties: top, right, left, bottom */
+
+        .image3{
+            position: absolute;
+            top: 100px;
+
+        }
+        /* div */
+        .container{
+            position: relative;
+            height: 4000px;
+            background-color: lightblue;
+
+        }
+        /* fixed */
+        /* is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled */
+
+        .image4{
+            position: fixed;
+        }
+        /* stiky */
+        /* is positioned based on the user's scroll position */
+        /* fixed:entire webpage */
+        /* stiky: relative to parent container */
+        
+
+        .image1{
+            position: sticky;
+            top: 100px;
+        }
+        .box{
+            background-color: aquamarine;
+            height: 5000px;
+        }
+
+        
+    </style>
+</head>
+<body>
+   <div class="container">
+
+    <img src="nobii.jpg" alt="poster1" width="200px" height="200px" class="image1">
+    <img src="doremon2.jpg" alt="poster2" width="200px" height="200px" class="image2">
+    <img src="doremon3.jpg" alt="poster3" width="230px" height="160px" class="image3">
+    <img src="nobita.jpg" alt="poster4" width="280px" height="180px" class="image4">
+
+   </div> 
+
+   <div class="box">
+
+   </div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations ka Gyaan</title>
+
+    <!-- Animations in CSS -->
+    <!-- An animation lets an element gradually change from one style to another style. -->
+
+    <!-- The @keyframes Rule -->
+    <!-- When you specify CSS styles inside the @keyframes rule, 
+    the animation will gradually change from the current style to the new style 
+    at certain times. -->
+
+    <!-- source styling to destination styling -->
+
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 8px solid black;
+        }
+        .box{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid yellow;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+
+            /* Specifies the name of the @keyframes animation */
+            animation-name: rightMovement;
+            
+            /* from this styling to styling, move ya shift krne m kitna time lgega */
+            animation-duration: 5s;
+
+            /* kitni baar animation krni h */
+            animation-iteration-count: infinite;
+
+            /* animation, start krne se pehle kitna rukna h */
+            animation-delay: 2s;
+
+            /* Specifies the speed curve of the animation */
+            /* The animation has the same speed from start to end */
+            animation-timing-function: linear;
+
+            /* ease - Specifies an animation with a slow start, then fast, then end slowly (this is default) */
+            animation-timing-function: ease;
+
+            /* ease-in - Specifies an animation with a slow start */
+            /* ease-out - Specifies an animation with a slow end */
+            /* ease-in-out - Specifies an animation with a slow start and end */
+            animation-timing-function: ease-out;
+
+            /* cubic-bezier(n,n,n,n) - Define your own values in the cubic-bezier function
+                                       Possible values are numeric values from 0 to 1 */
+            animation-timing-function: cubic-bezier(1, -0.4, 1, 1);
+
+            /* Specifies whether an animation should be played forwards, backwards or in alternate cycles */
+            /* alternate, reverse, alternate-reverse, */
+            animation-direction: alternate;
+
+            /* Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both) */
+            /* first frame se pehle, last frame k baad, ky krna h y, hum decide kr skte h */
+            animation-fill-mode: forwards;
+
+            /* Specifies whether the animation is running or paused */
+            animation-play-state: running;
+
+            /* short-hand notation */
+
+            /* @keyframes duration | timing-function | delay |
+               iteration-count | direction | fill-mode | play-state | name */
+
+            animation: 4s linear 1s infinite alternate none running rightMovement;
+
+        }
+        /* iss position se iss position p jana h  */
+        @keyframes rightMovement{
+
+            /* initial state and source styling */
+            from{
+                top: 0;
+                left: 0;
+
+            }
+            /* destination state and destination styling */
+            to{
+                top: 0;
+                left: 1400px;
+            }
+        }
+
+        .box2{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border: 3px solid yellow;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            animation: 4s ease-in 1s infinite alternate none running leftMovement;
+
+        }
+
+        @keyframes leftMovement{
+        from{
+            top: 680px;
+            left: 1350px;
+        
+        }
+        to{
+            top: 680px;
+            left: 0;
+        }
+        }
+
+        #circle {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 3px solid yellow;
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            /* placed circle */
+            top: 30%;
+            left: 40%;
+            animation: 10s ease-in-out 0s infinite alternate-reverse none running circleMovement;
+
+        }
+
+        @keyframes circleMovement{
+            /* 0% means starting */
+        0%{
+            top: 1%;
+            left: 5%;
+        
+        }
+        30%{
+            top: 5%;
+            left: 90%;
+        }
+        60%{
+            top: 70%;
+            left: 10%;
+        }
+        100%{
+            top: 75%;
+            left:90%;
+        }
+        }
+
+    </style>
+
+</head>
+<body>
+  
+    <div class="container">
+
+        <div class="box"></div>
+        <div class="box2"></div>
+        <div id="circle"></div>
+        
+
+    </div>
+</body>
+</html>

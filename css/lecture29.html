@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Transform</title>
+    <!-- translation, scaling, rotation -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            background-color: rgb(221, 194, 160);
+            padding: 5rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .items{
+            padding: 2rem;
+            height: 150px;
+            width: 150px;
+            background-color: rgb(53, 53, 248);
+            border: 2px solid black;
+        }
+        #rotateX:hover{
+            /* x-axis k corresponding, rotate 45 deg */
+            transform: rotateX(45deg);
+        }
+        #rotateY:hover{
+           /* y-axis */
+           /* transform: rotateY(45deg); */
+            transform: rotateY(-45deg);
+        }
+        #rotateZ:hover{
+           /* z ,clock-wise */
+            transform: rotateZ(45deg);
+        }
+        #translateX:hover{
+           /* movement in x-axis , positive value m right side, move krega*/
+            transform: translateX(100px);
+            /* negative value m left side, move */
+            /* transform: translateX(-100px); */
+        }
+        #translateY:hover{
+            /* upr-niche, move */
+           transform: translateY(100px);
+        }
+        #translateZ:hover{
+            /* for visibility, to set a perspective  */
+            /* negative m, mere se dur  */
+            /* positive m, mere se pass */
+            transform: perspective(300px) translateZ(100px);
+        }
+        #scaleX:hover{
+           /* scale means size increse */
+            transform: ScaleX(1.5);
+        }
+        #scaleY:hover{
+           
+            transform: ScaleY(1.5);
+
+            /* tilt , skew, 2 property */
+            /* transform: SkewY(30deg); */
+            /* transform: SkewX(30deg); */
+        }
+        #scaleZ:hover{
+            /* for visibility, to set a perspective  */
+            transform: perspective(300px) scaleZ(2) rotateY(30deg);
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="items" id="rotateX">RotateX</div>
+    <div class="items" id="rotateY" >RotateY</div>
+    <div class="items" id="rotateZ" >RotateZ</div>
+    <div class="items" id="translateX">TranslateX</div>
+    <div class="items" id="translateY" >TranslateY</div>
+    <div class="items" id="translateZ" >TranslateZ</div>
+    <div class="items" id="scaleX">ScaleX</div>
+    <div class="items" id="scaleY">ScaleY</div>
+    <div class="items" id="scaleZ">ScaleZ</div>
+   </div> 
+</body>
+</html>

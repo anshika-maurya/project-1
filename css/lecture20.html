@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Shadows in CSS -->
+    <!-- 1. Box Shadow   2. Text Shadow -->
+
+    <!-- The box-shadow CSS property adds shadow effects around an element's frame. -->
+    <!-- 5 perimeter: A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color. -->
+
+    <!-- The text-shadow CSS property adds shadows to text. -->
+
+    <style>
+        /* by adding in root, hum hr jagah (color, width) change kr skte h, hr koi element access kar payega */
+        :root{
+            --primary-color: brown;
+            --custom-width: 330px;  
+
+        }
+
+        .container{
+            background-color: lightgoldenrodyellow;
+            height: 700px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+
+            /* to create custom varible, defining by (syntax: --primary-color, --custom-width) */
+            /*to access by, var(--primary-color), var(--custom-width) */
+            /* --primary-color: brown;
+            --custom-width: 330px; */
+
+            background-color: lightyellow;
+            /* width: var(--custom-width); */
+            width: 450px;
+            height: 450px;
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+           
+            /* box-shadow */
+            /* x-offset, shadow move to x-direction(right), if(-)minus add in value, than shadow move to left direction */
+            /* y-offset, (up-down)*/
+            /* positive-value, negative-value */
+            /* color */
+
+            box-shadow: 20px 15px gray;
+
+            /* box shadow using blur-radius */
+            /* jada value se , brul bada hoga ar utna color light hoga */
+            /* not use of negative-value in brul-radius */
+            box-shadow: 20px 15px 20px gray;
+
+            /* box-shadow + brul-radius + spread-radius */
+            /* shadow kitni spread krni h, kitni dur tkh leke jani h */
+            box-shadow: 20px 15px 20px 10px gray;
+
+            /* inset se shadow andr ki traf aati h */
+            box-shadow: inset 10px 10px gray;
+
+            /* to adding multiple shadow by using (,)  */
+            box-shadow: 20px 15px lightcoral, 25px 20px gray ;
+
+            /* using varibles, to change color in multiple area */
+            /* variable are container for storing data */
+        }
+        
+        /* text-shadow: x-offset, y-offset, brul-radius, color */
+        #head1{
+    
+            text-shadow: 3px 3px 2px orange;
+            /* text-shadow: orange 3px 3px 2px; */
+            /* text-shadow: orange 3px 3px; */
+
+            /* by default-shadow color is */
+            /* text-shadow: 12px 15px; */
+        }
+        /* to add multiple text shadow in 1 text */
+        
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <img src="ram.jpg" alt="Jai Shree Ram" width="250px">
+            <h2 id="head1">Jai Shree Ram</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam dolorem aspernatur eum tenetur molestiae 
+               aperiam ipsum deserunt, porro praesentium laborum ab repellendus ratione quasi illo.
+            </p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

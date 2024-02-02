@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+
+    <!-- transition -->
+
+    <!-- subset of animation , animation ki child entity h-->
+
+    <!-- single switch-movement, src se dest -->
+
+    <!-- The transition CSS property is a shorthand property for transition-property, 
+    transition-duration, transition-timing-function, transition-delay, and transition-behavior. -->
+
+    <style>
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: blanchedalmond;
+            border: 2px solid black;
+            /* if transition property: all , than hr ek property p transition apply hoga, deehre-deehre blue color p jayega */
+
+            /* CSS transitions allows you to change property values smoothly, over a given duration. */
+
+            transition-property: all;
+            transition-duration: 4s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in;
+
+            /* Transitions enable you to define the transition between two states of an element. Different states 
+            may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript. */
+
+            /* :hover or :active */
+
+            /* short-hand notation */
+
+            /* property name | duration */
+            /* property name | duration | delay */
+            /* property name | duration | easing function */
+            
+            /* property name | duration | easing function | delay */
+            transition: all 2s ease-in 0s;
+
+            /* using(,) transition in multiple properties */
+            transition: width 2s, height 5s;
+
+        }
+
+        .box:hover{
+            width: 1800px;
+            height: 1200px;
+            background-color: blue;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+
+    </div>
+
+</body>
+</html>

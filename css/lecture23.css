@@ -1,0 +1,72 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: hotpink;
+    border: 2px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+
+    transition: all 5s linear 0s;
+    
+
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    /* clockwise, positive */
+    transform: rotate(360deg);
+
+    /* anti-clockwise, negative */
+    transform: rotate(-45deg);
+
+    /* normal-default size is 1, scale means size bada-chota */
+    /* size-increase */
+    transform: scale(2);
+
+    /* size-decrease */
+    transform: scale(0.5);
+
+    /* tilt(tadaa) */
+    transform: skew(45deg);
+    transform: skew(-45deg);
+
+    /* translate and movement */
+    /* right-direction move, x */
+    transform: translate(500px);
+    /* left-direction move, y*/
+    transform: translate(-500px);
+
+    /* upr ar niche k liye */
+    /* down */
+    transform: translate(0px, 500px);
+    /* up */
+    transform: translate(0px, -500px);
+    /* diagnal */
+    transform: translate(500px, -500px);
+
+    /* matrix */
+    /* The matrix() method combines all the 2D transform methods into one. */
+
+    /* The matrix() method take six parameters, containing mathematic functions, 
+    which allows you to rotate, scale, move (translate), and skew elements. */
+
+    /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+    /* should width, height matches with last 2 */
+    
+    transform: matrix(2, -0.3, 0, 1, 400, 400);
+
+}
+
+p{
+    font-size: 38px;
+}

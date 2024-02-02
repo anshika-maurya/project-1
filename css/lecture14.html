@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- flex -->
+    <!-- Flexbox is a one-dimensional layout method for arranging items in rows or columns.  -->
+    <!-- Items flex (expand) to fill additional space or shrink to fit into smaller spaces.  -->
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            /* display, flex-direction, flex-wrap, flex-flow, justify-content, align-items, align-content */
+            background-color: burlywood;
+            border: 5px solid black;
+            height: 800px;
+
+            
+            /* by default flex direction is row */
+            display: flex;
+
+            /* flex-direction: column; */
+
+            /* box comes to next next line, condition: jbhtkh space available hai tbhtkh nahi */
+            /* flex-wrap: wrap; */
+
+            /* Short-hand Notation */
+            /* flex-flow */
+            /* flex-flow: row wrap; */
+
+            /* bilkul center m ajati h by adding,
+            justify-content: center;
+            align-items: center; */
+
+            /*main axis k corresponding, horizontally k corresponding center m place hoga, in row */
+            justify-content: start;
+            /* justify-content: space-evenly; */
+
+            /* corresponding to cross-axis , cross axis is vertically, vertically axis m center m place honge*/
+            align-items: start;
+
+            /* if height is not there, items(boxs) strected, by default */
+            /* align-items: stretch; */
+
+            /* wrap-on, and finding out spacing and to handle spacing by this property: align-content */
+            align-content: start;
+            /* ending shifted content */
+            /* align-content:end; */
+
+
+        }
+
+        .box{
+            height: 200px;
+            width: 200px;
+
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+        }
+        #box1{
+            background-color: blue;
+            /* order, flex-shrink, flex-grow, flex-basis, align-self */
+
+            /* order */
+            /* order is a property, by giving value can change sequence of flex-items */
+            order: 100;
+
+            /* flex-shrink: 4; */
+            /* flex-grow: 1; */
+
+            
+            
+        }
+        #box2{
+
+
+            background-color: aquamarine;
+            /* flex-shrink */
+            /* The flex-shrink property specifies how the item will shrink relative to the rest of the flexible items inside the same container. */
+       
+            /* flex-grow: 1; */
+            /* align-self: end; */
+
+        }
+        #box3{
+
+            background-color: palevioletred;
+            /* flex-grow */
+            /* The flex-grow property specifies how much the item will grow relative to the rest of the flexible items inside the same container. */
+
+            /* flex-grow: 5; */
+            /* takes remaining space (joh flex container m bacha hai), and speed bhi bad jayegi, grow karne ki  */
+
+            /* particular box */
+            align-self: center;
+
+            
+        }
+        #box4{
+
+            background-color: rebeccapurple;
+
+            /* flex-grow: 1; */
+
+            /* to set dimensions and width */
+            /* sets the initial main size of a flex item. 
+            It sets the size of the content box unless otherwise set with box-sizing. */
+            /* flex-basis: 400px; */
+
+            /* shorthand notation */
+            flex:1 1 50px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box" id="box2">Box2</div>
+        <div class="box" id="box3">Box3</div>
+        <div class="box" id="box4">Box4</div>
+    </div>
+</body>
+</html>

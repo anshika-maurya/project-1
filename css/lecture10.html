@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    
+    <style>
+
+        /* em */
+        /* Relative to the font-size of the element (2em means 2 times the size of the current font) */
+        /* if parent size:10px and child font size is 10em than, 10em x 10px = */
+        /* 1 em = 16 px */
+
+        .container{
+            font-size: 20px;
+        }
+        .box{
+            font-size: 2em;
+            margin: 1.5em;
+        }
+
+        /* rem */
+        /* Relative to font-size of the root element */
+        /* root element is by default = 16px  */
+
+
+        .firstPara{
+            border: 1px solid black;
+            font-size: 3rem;
+        }
+
+        .secondPara{
+            border: 1px solid black;
+            font-size: 48px;
+        }
+    </style>
+
+    
+</head>
+<body>
+
+    <p>
+        Hello jee!
+    </p>
+
+    <!-- em -->
+
+    <div class="container">
+       
+        <div class="box">
+            hello jee
+        </div>
+    </div>
+    
+    <!-- rem -->
+    
+    <div class="firstPara">
+        Hello jee
+    </div>
+
+    <div class="secondPara">
+        Hello jee
+    </div>
+    
+</body>
+</html>
